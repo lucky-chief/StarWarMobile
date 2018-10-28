@@ -49,3 +49,60 @@ MonoBehaviour:
       HasForeignKey: 0
       ForeignKeyIndex: 0
       ForeignKey: 
+  - TableName: BaseAttributeTable
+    ShowName: "\u5355\u4F4D\u7684\u57FA\u672C\u5C5E\u6027\u8868"
+    CodePath: F:\wjjgame\StarWarMobile\Assets\Scripts\Templates/BaseAttributeTableSerializeData.cs
+    DataPath: Assets/Scripts/Templates/BaseAttributeTable.asset
+    HasPrimaryKey: 1
+    PrimaryKey: ID
+    PrimaryIndex: 1
+    PrimaryType: int
+    FieldList:
+    - Name: ID
+      ShowName: "\u5355\u4F4D\u7684\u552F\u4E00\u6807\u8BC6"
+      FieldType: int
+      FieldIndex: 0
+      GenericType: int
+      GenericIndex: 0
+      EnumIndex: 0
+      EnumName: 
+      IsExport: 1
+      HasForeignKey: 0
+      ForeignKeyIndex: 0
+      ForeignKey: 
+    - Name: name
+      ShowName: "\u5355\u4F4D\u540D\u79F0"
+      FieldType: string
+      FieldIndex: 2
+      GenericType: int
+      GenericIndex: 0
+      EnumIndex: 0
+      EnumName: 
+      IsExport: 1
+      HasForeignKey: 0
+      ForeignKeyIndex: 0
+      ForeignKey: 
+    - Name: chgAttrIntVals
+      ShowName: "\u4FEE\u6539\u5C5E\u6027\u503C\u5217\u8868"
+      FieldType: List
+      FieldIndex: 15
+      GenericType: int
+      GenericIndex: 0
+      EnumIndex: 0
+      EnumName: 
+      IsExport: 1
+      HasForeignKey: 0
+      ForeignKeyIndex: 0
+      ForeignKey: 
+    - Name: chgAttrFloatVals
+      ShowName: 
+      FieldType: List
+      FieldIndex: 15
+      GenericType: float
+      GenericIndex: 1
+      EnumIndex: 0
+      EnumName: 
+      IsExport: 1
+      HasForeignKey: 0
+      ForeignKeyIndex: 0
+      ForeignKey: 
