@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Agent : MonoBehaviour,IObject
 {
-    private TemplateUnitAttributes attrTpl;
+    //private TemplateUnitAttributes attrTpl;
     private GameUnitAttribute attr;
     private Transform2D transform2D;
 
