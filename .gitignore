@@ -1,6 +1,7 @@
 *.csproj
 Library/
 Packages/
-*.sln
+StartWarMobile.sln
 Temp/
 .vscode/
+ProjectSettings/ProjectVersion.txt
