@@ -3,3 +3,4 @@ Library/
 Packages/
 *.sln
 Temp/
+.vscode/
