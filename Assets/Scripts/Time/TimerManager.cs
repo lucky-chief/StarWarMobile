@@ -1,10 +1,11 @@
 using UnityEngine;
 using System.Collections.Generic;
+using SWEngine;
 
 public class TimerManager : MonoSingleton<TimerManager>
 {
     public int frameCount{get;private set;}
-    public Dictionary<long,IObject> updatableMap = new Dictionary<long, IObject>();
+    public Dictionary<long,SWObject> updatableMap = new Dictionary<long, SWObject>();
 #region 生命周期函数
     void Start()
     {
@@ -27,7 +28,7 @@ public class TimerManager : MonoSingleton<TimerManager>
     }
 #endregion
 #region 共有方法
-public void RegisterFixedUpdatable(IObject updater,UpdaterGroup group = UpdaterGroup.AllGroup)
+public void RegisterFixedUpdatable(SWObject updater,UpdaterGroup group = UpdaterGroup.AllGroup)
 {
 
 }

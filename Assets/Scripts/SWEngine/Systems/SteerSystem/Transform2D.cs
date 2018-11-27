@@ -99,10 +99,5 @@ namespace SWEngine
         {
             m_owner = null;
         }
-
-        public void LookAt(Vector2 target)
-        {
-            
-        }
     }
 }

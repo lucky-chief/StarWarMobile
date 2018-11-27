@@ -1,4 +1,6 @@
-
+namespace  SWEngine
+{
+    
 //弹道类型
 public enum BulletPath
 {
@@ -13,7 +15,7 @@ public enum SettlementType
     time,//定时
     always,//一直
 }
-public class Bullet : IObject
+public class Bullet : SWObject
 {
     public int bulletId;
     public float speed;
@@ -36,4 +38,5 @@ public class Bullet : IObject
     {
         throw new System.NotImplementedException();
     }
+}
 }
