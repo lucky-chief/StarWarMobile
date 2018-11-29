@@ -11,6 +11,7 @@ namespace SWEngine
 
 	public enum SteerFace
 	{
+		None,
 		FaceUp,
 		FaceDown,
 		FaceBLU,
@@ -29,6 +30,7 @@ namespace SWEngine
 		private float _arriveThreshold = 0.01f;
 
 		private Action _arriveCallback;
+		private Action<SteerFace> _onSteerFaceChange;
 
 		public SteerAgent(Transform2D trans2D)
 		{
@@ -59,6 +61,24 @@ namespace SWEngine
 			}
 			set{
 				_arriveThreshold = Mathf.Clamp(value,0,float.MaxValue);
+			}
+		}
+
+		public Action arriveCallback{
+			get{
+				return _arriveCallback;
+			}
+			set{
+				_arriveCallback = value;
+			}
+		}
+
+		public Action<SteerFace> OnSteerFaceChange{
+			get{
+				return _onSteerFaceChange;
+			}
+			set{
+				_onSteerFaceChange = value;
 			}
 		}
 
@@ -112,6 +132,18 @@ namespace SWEngine
 			_transform.Position += dir * _speed * deltaTime;
 		}
 
+		protected void SetSteerFace(SteerFace face)
+		{
+			if(_steerFace != face)
+			{
+				_steerFace = face;
+				if(_onSteerFaceChange != null)
+				{
+					_onSteerFaceChange.Invoke(face);
+				}
+			}
+		}
+
 		protected void Rotate(float deltaTime,Vector2 dir)
 		{
 			Vector3 cross = Vector3.Cross( _transform.Forword,dir);
@@ -125,38 +157,38 @@ namespace SWEngine
 				{
 					if(angleTarget <= 45)
 					{
-						_steerFace = SteerFace.FaceUp;
+						SetSteerFace(SteerFace.FaceUp);
 					}
 					else if(angleTarget <= 90)
 					{
-						_steerFace = SteerFace.FaceBRU;
+						SetSteerFace(SteerFace.FaceBRU);
 					}
 					else if(angleTarget < 135)
 					{
-						_steerFace = SteerFace.FaceBRD;
+						SetSteerFace(SteerFace.FaceBRD);
 					}
 					else
 					{
-						_steerFace = SteerFace.FaceDown;
+						SetSteerFace(SteerFace.FaceDown);
 					}
 				}
 				else
 				{
 					if(angleTarget <= 45)
 					{
-						_steerFace = SteerFace.FaceDown;
+						SetSteerFace(SteerFace.FaceDown);
 					}
 					else if(angleTarget <= 90)
 					{
-						_steerFace = SteerFace.FaceBRD;
+						SetSteerFace(SteerFace.FaceBRD);
 					}
 					else if(angleTarget < 135)
 					{
-						_steerFace = SteerFace.FaceBRD;
+						SetSteerFace(SteerFace.FaceBRD);
 					}
 					else
 					{
-						_steerFace = SteerFace.FaceDown;
+						SetSteerFace(SteerFace.FaceDown);
 					}
 				}
 			}
@@ -166,38 +198,38 @@ namespace SWEngine
 				{
 					if(angleTarget <= 45)
 					{
-						_steerFace = SteerFace.FaceUp;
+						SetSteerFace(SteerFace.FaceUp);
 					}
 					else if(angleTarget <= 90)
 					{
-						_steerFace = SteerFace.FaceBLU;
+						SetSteerFace(SteerFace.FaceBLU);
 					}
 					else if(angleTarget < 135)
 					{
-						_steerFace = SteerFace.FaceBLD;
+						SetSteerFace(SteerFace.FaceBLD);
 					}
 					else
 					{
-						_steerFace = SteerFace.FaceDown;
+						SetSteerFace(SteerFace.FaceDown);
 					}
 				}
 				else
 				{
 					if(angleTarget <= 45)
 					{
-						_steerFace = SteerFace.FaceDown;
+						SetSteerFace(SteerFace.FaceDown);
 					}
 					else if(angleTarget <= 90)
 					{
-						_steerFace = SteerFace.FaceBLD;
+						SetSteerFace(SteerFace.FaceBLD);
 					}
 					else if(angleTarget < 135)
 					{
-						_steerFace = SteerFace.FaceBLD;
+						SetSteerFace(SteerFace.FaceBLD);
 					}
 					else
 					{
-						_steerFace = SteerFace.FaceDown;
+						SetSteerFace(SteerFace.FaceDown);
 					}
 				}
 			}
