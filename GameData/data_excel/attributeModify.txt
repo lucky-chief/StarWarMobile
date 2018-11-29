@@ -1,0 +1,8 @@
+﻿id	unitId	attribute1	value1	attribute2	value2	attribute3	value3	attribute4	value4														
+int	int	int	string	int	string	int	string	int	string														
+唯一ID(前两个数字代表升级属性类型，后两个数字代表单位，比如：1201护甲机枪兵即机枪兵护甲）	单位Id（-1=影响所有敌方单位，-2影响所有我放单位，其它=影响对应单位ID）	属性1	属性1改变值	属性2	属性2改变值	属性3	属性3改变值	属性4	属性4改变值														
+1101	102	3	1	4	1	0	0	0	0														
+1102	103	3	2	0	0	0	0	0	0														
+1201	102	7	1	0	0	0	0	0	0														
+																							
+																							

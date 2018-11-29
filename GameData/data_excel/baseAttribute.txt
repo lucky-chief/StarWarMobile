@@ -1,0 +1,21 @@
+﻿id	name	descId	productCost	unlockCost	hp	atkSpeed	atkDistance	armor	speed	invincible	level	miningOfCrystal	miningOfGas	speedOfCrystal	speedOfGas	mumber	volume	type				
+int	string	int	int	int	int	float	int	int	float	int	int	int	int	float	float	int	int	int				
+单位的唯一id	单位名称	单位描述文本id	生产或建造消耗	解锁消耗	血量	攻击速度	攻击范围	护甲	移动速度	是否无敌	等级	单次挖晶矿量	单次挖气矿量	挖晶矿速度	挖气矿速度	数量	体积	类型				
+101	scv	1	101	0	60	0	0	0	0	0	0	8	8	5	3	1	1	1				
+102	marine	2	102	0	40	2	4	0	0	0	0	0	0	0	0	1	1	1				
+103	firebat	3	103	103	50	2	2	1	0	0	0	0	0	0	0	1	1	1				
+201	commandCenter	4	0	0	1500	0	0	0	0	0	0	0	0	0	0	0	3	1				
+202	tower	5	201	0	350	0	0	0	0	0	0	0	0	0	0	0	3	1				
+203	supplyDepot	6	0	0	0	0	0	0	0	0	0	0	0	0	0	1	3	1				
+204	house	7	202	0	0	0	0	0	0	1	0	0	0	0	0	0	3	1				
+205	academy	8	203	0	0	0	0	0	0	1	0	0	0	0	0	1	3	1				
+206	barracks	9	204	0	0	0	0	0	0	1	0	0	0	0	0	0	3	1				
+207	artillery	10	205	0	0	0	0	0	0	1	0	0	0	0	0	0	3	1				
+208	starport	11	206	0	0	0	0	0	0	1	0	0	0	0	0	0	3	1				
+209	upgradeBarracks	12	207	0	0	0	0	0	0	1	0	0	0	0	0	1	3	1				
+210	upgradeArtillery	13	208	0	0	0	0	0	0	1	0	0	0	0	0	1	3	1				
+211	upgradeStarport	14	208	0	0	0	0	0	0	1	0	0	0	0	0	1	3	1				
+																						
+																						
+																						
+																						
